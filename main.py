@@ -102,8 +102,8 @@ pyautogui.press('down')
 
 
 
-for i in range(5):
-    for j in range(6):
+for i in range(5): "Loop Variando SE"
+    for j in range(6): "Loop Variando S"
         ciclo(s_txt, dest, fon_nomes)
         s += 10
         s_txt = str(s)+"%"
