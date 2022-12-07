@@ -5,23 +5,23 @@ import ctypes
 from ctypes import wintypes
 from collections import namedtuple
 
-"Automatiza o preenchimento da curva de carga nas boletas do Thunder via Bot"
+"Automatiza a geração dos prevs de uma matriz"
 
 print("IMPORTANTE:")
+print("-Rodar pelo Debugger")
 print("-É necessário estar com a planilha Prevs aberta, selecionada a célula da ENA NE")
+print("-Verificar o mês na planilha")
 print("-É necessário estar com a pasta Prevs-Pasta aberta, selecionado o 3° item prevs.dat")
 print("-É necessário estar com a pasta destino aberta")
 print("-É necessário estar com a pasta de origem dos nomes aberta, selecionado o item que começará os nomes")
 
-se = 60
-s = 60
+se = 60 #ENA SE Inicial
+s = 60 #ENA S Inicial
 s_txt = str(s)+"%"
 se_txt = str(se)+"%"
 dest = input('Digite o Título da Pasta Destino: ')
 dest = str(dest)
 fon_nomes = input('Digite o Título da Pasta De onde virão os nomes: ')
-# pyautogui.getWindowsAt(15528,10)[0].activate()
-time.sleep(.1)
 
 def ciclo(s_txt, dest, Fon_nomes):
     gw.getWindowsWithTitle('Vazoes_Prevs')[0].activate()
@@ -102,8 +102,8 @@ pyautogui.press('down')
 
 
 
-for i in range(5): "Loop Variando SE"
-    for j in range(6): "Loop Variando S"
+for i in range(5): #Loop Variando SE
+    for j in range(6): #Loop Variando S
         ciclo(s_txt, dest, fon_nomes)
         s += 10
         s_txt = str(s)+"%"
@@ -128,12 +128,6 @@ for i in range(5): "Loop Variando SE"
     # time.sleep(.2)
     s = 60
     s_txt = str(s) + "%"
-
-# for i in range(5):   #Peenchimento do primeiro ano até o final
-#     for j in range(6):
-#         s += 10
-#     se += 10
-
 
 # Daqui pra baixo código pra seber o nome das pastas
 
