@@ -64,6 +64,8 @@ def ciclo(s_txt, dest, Fon_nomes):
     time.sleep(.4)
     pyautogui.press('esc')
     time.sleep(.4)
+    pyautogui.press('down')
+    time.sleep(.4)
     gw.getWindowsWithTitle(dest)[0].activate()
     time.sleep(.4)
     pyautogui.press('f2')
@@ -75,9 +77,8 @@ def ciclo(s_txt, dest, Fon_nomes):
     pyautogui.press('enter')
     time.sleep(.4)
     pyautogui.press('enter')
-    gw.getWindowsWithTitle(Fon_nomes)[0].activate()
-    time.sleep(.4)
-    pyautogui.press('down')
+
+
 
 
 for j in range(6):
