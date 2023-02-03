@@ -1,11 +1,12 @@
+import pygetwindow as gw
 import pyautogui
 import time
-import pygetwindow as gw
 import ctypes
 from ctypes import wintypes
 from collections import namedtuple
 
-"Automatiza a geração dos prevs de uma matriz"
+
+'Automatiza a geração dos prevs de uma matriz'
 
 print("IMPORTANTE:")
 print("-Rodar pelo Debugger")
@@ -48,18 +49,27 @@ def ciclo(s_txt, dest, Fon_nomes):
     # time.sleep(.1)
     pyautogui.press('up')
     # time.sleep(.1)
+    pyautogui.press('up')
     pyautogui.press('enter')
-    time.sleep(.15)
+    time.sleep(.1)
     pyautogui.press('down')
-    time.sleep(.15)
+    time.sleep(.1)
     pyautogui.press('down')
-    time.sleep(.15)
+    time.sleep(.1)
     pyautogui.press('down')
-    time.sleep(.15)
+    #time.sleep(.15)
+    pyautogui.press('down')
+    #time.sleep(.25)
     pyautogui.hotkey('ctrlleft', 'c')
+    #time.sleep(.15)
     gw.getWindowsWithTitle(dest)[0].activate()
+    gw.getWindowsWithTitle(dest)[0].activate()
+    gw.getWindowsWithTitle('Prevs-Pasta')[0].maximize()
+    #time.sleep(.25)
     pyautogui.hotkey('ctrlleft', 'v')
+    #time.sleep(.25)
     gw.getWindowsWithTitle(Fon_nomes)[0].activate()
+    #time.sleep(.15)
     pyautogui.press('f2')
     # time.sleep(.1)
     pyautogui.hotkey('ctrlleft', 'a')
