@@ -12,7 +12,7 @@ print("IMPORTANTE:")
 print("-Rodar pelo Debugger")
 print("-É necessário estar com a planilha Prevs aberta, selecionada a célula da ENA NE")
 print("-Verificar o mês na planilha")
-print("-É necessário estar com a pasta Prevs-Pasta aberta, selecionado o 4° item prevs.dat")
+print("-É necessário estar com a pasta Prevs-Pasta aberta, selecionado o 5° item prevs.dat")
 print("-É necessário estar com a pasta destino aberta")
 print("-É necessário estar com a pasta de origem dos nomes aberta, selecionado o item que começará os nomes")
 
